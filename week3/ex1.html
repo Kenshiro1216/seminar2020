@@ -4,8 +4,10 @@
     <script>
         var html = "";
         function random() {
-            var number = Math.floor(Math.random() * 6) + 1;
-            html = "<li>" + number + "</li>";
+            for (var i = 1; i <= 10; i++) {
+                var number = Math.floor(Math.random() * 6) + 1;
+                html = html + "<li>" + number + "</li>";
+            }
             document.getElementById("number").innerHTML = html;
         }
     </script>
