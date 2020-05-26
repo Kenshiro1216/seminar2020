@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script>
+        var html;
+        var int;
+        var number;
+        function calc() {
+            html = "";
+            int = document.getElementById("int").value;
+            int = Number(int);
+            number = 1;
+            for (var i = 1; i <= int; i++) {
+                number = number * i;
+                html = html + "<li>" + i + "の階乗は" + number + "です" + "</li>";
+            }
+            document.getElementById("number").innerHTML = html;
+        }
+    </script>
+</head>
+
+<body>
+    求める回数
+    <input type="text" id="int">
+    <button onclick="calc()">計算</button>
+    <ul id="number"></ul>
+</body>
+
+</html>

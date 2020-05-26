@@ -2,8 +2,9 @@
 
 <head>
     <script>
-        var html = "";
+        var html;
         function random() {
+            html = "";
             for (var i = 1; i <= 10; i++) {
                 var number = Math.floor(Math.random() * 6) + 1;
                 html = html + "<li>" + number + "</li>";
