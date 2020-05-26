@@ -2,10 +2,28 @@
 
 <head>
     <script>
+        function rate() {
+            var a = document.getElementById("win").value;
+            a = Number(a);
+            var b = document.getElementById("lose").value;
+            b = Number(b);
+            var c = a / (a + b) * 100;
+            document.getElementById("winrate").value = c;
+        }
     </script>
 </head>
 
 <body>
+    勝数 :
+    <input type="text" id="win"><br>
+    負数 :
+    <input type="text" id="lose">
+    <hr>
+    <button onclick="rate()">計算</button>
+    <hr>
+    勝率は
+    <input id="winrate">
+    ％です.
 
 </body>
 
