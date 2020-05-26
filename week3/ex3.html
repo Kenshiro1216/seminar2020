@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script>
+        var html;
+        var int;
+        function table() {
+            html = "";
+            for (var i = 1; i <= 20; i++) {
+                if (i % 15 == 0) {
+                    int = "fizzbuzz";
+                } else if (i % 3 == 0) {
+                    int = "fizz";
+                } else if (i % 5 == 0) {
+                    int = "buzz";
+                } else {
+                    int = " ";
+                }
+                html = html + "<tr><td>" + i + "</td><td>" + int + "</td></tr>";
+            }
+            document.getElementById("number").innerHTML = html;
+        }
+    </script>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="table()">生成</button>
+    <table id="number"></table>
+</body>
+
+</html>
