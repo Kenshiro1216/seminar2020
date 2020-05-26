@@ -2,10 +2,18 @@
 
 <head>
     <script>
+        var html = "";
+        function random() {
+            var number = Math.floor(Math.random() * 6) + 1;
+            html = "<li>" + number + "</li>";
+            document.getElementById("number").innerHTML = html;
+        }
     </script>
 </head>
 
 <body>
+    <button onclick="random()">乱数生成</button>
+    <ul id="number"></ul>
 </body>
 
 </html>
