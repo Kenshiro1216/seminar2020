@@ -2,6 +2,23 @@
 
 <head>
     <script>
+        var a;
+        var b;
+        var c;
+        var d;
+        var answer;
+        function change() {
+            a = document.getElementById("1").value;
+            a = Number(a);
+            b = document.getElementById("2").value;
+            b = Number(b);
+            c = document.getElementById("3").value;
+            c = Number(c);
+            d = document.getElementById("4").value;
+            d = Number(d);
+            answer = 8 * a + 4 * b + 2 * c + d;
+            document.getElementById("answer").value = answer;
+        }
     </script>
 </head>
 
