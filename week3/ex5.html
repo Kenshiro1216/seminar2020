@@ -3,11 +3,18 @@
 <head>
     <script>
         var html;
-        var int;
+        var money;
+        var rate;
         function table() {
             html = "";
+            money = document.getElementById("money").value;
+            money = Number(money);
+            rate = document.getElementById("rate").value;
+            rate = Number(rate);
             for (var i = 1; i <= 10; i++) {
-                html = html + "<tr><td>" + i + "</td><td>" + "</td></tr>";
+                money = money * rate * 0.01 + money;
+                money = Math.round(money);
+                html = html + "<tr><td>" + i + "</td><td>" + money + "</td></tr>";
             }
             document.getElementById("number").innerHTML = html;
         }
