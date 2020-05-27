@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script>
+        var i;
+        var a;
+        function number() {
+            i = Math.floor(Math.random() * 20 + 1);
+            document.getElementById("text").innerHTML = "数当てゲームを開始しました！いくつかな？";
+            return i;
+        }
+        function answer() {
+            a = document.getElementById("answer").value;
+            a = Number(a);
+            if (a == i) {
+                document.getElementById("text").innerHTML = "あたり！";
+            } else if (a > i) {
+                document.getElementById("text").innerHTML = "はずれ！それより小さいです";
+            } else if (a < i) {
+                document.getElementById("text").innerHTML = "はずれ！それより大きいです";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="number()">Start</button>
+    <hr>
+    <input type="text" id="answer">
+    <button onclick="answer()">回答</button>
+    <hr>
+    <p id="text">数当てゲームを開始するには、Startボタンを押してください</p>
+</body>
+
+</html>
