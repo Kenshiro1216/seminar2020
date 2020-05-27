@@ -3,12 +3,22 @@
 <head>
     <script>
         var a;
-        var a1, a2, a3, a4, a5, a6;
+        var a1;
+        var a2;
+        var a3;
+        var a4;
+        var a5;
+        var a6;
         var random;
         function times() {
             a = document.getElementById("many").value;
             a = Number(a);
-            a1, a2, a3, a4, a5, a6 = 0;
+            a1 = 0;
+            a2 = 0;
+            a3 = 0;
+            a4 = 0;
+            a5 = 0;
+            a6 = 0;
             for (var i = 1; i <= a; i++) {
                 random = Math.floor(Math.random() * 6 + 1);
                 if (random == 1) {
